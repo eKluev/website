@@ -1,0 +1,14 @@
+{% for project in projects %}
+    <div class="bg d-flex flex-column flex-md-row justify-content-between">
+        <div class="flex-grow-1 m-4">
+            {% if project.link %}
+                <h5 class="mb-2">{{ project.name }} [{{ project.type }}] [<a href="{{ project.link }}" target="_blank">LINK</a>]</h5>
+            {% else %}
+                <h5 class="mb-2">{{ project.name }} [{{ project.type }}]</h5>
+            {% endif %}
+            <p class="mx-3 mb-2">{{ project.description }}</p>
+            <p class="mx-3 fst-italic">{{ project.stack }}</p>
+
+        </div>
+    </div>
+{% endfor %}

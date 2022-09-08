@@ -1,0 +1,13 @@
+{% load static %}
+{% for el in about %}
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+        <div class="flex-grow-1">
+            <h3 class="card-header">{{ el.name }}</h3>
+            <h4 class="card-body">{{ el.description|linebreaks }}</h4>
+            <h5 class="card-footer">
+                <p class="mx-0"><img class="icon-logo" src="{% static "/img/logos/email.png" %}" alt="e-mail"><a href="mailto:{{ el.mail }}">{{ el.mail|upper }}</a></p>
+                <p class="mx-0"><img class="icon-logo" src="{% static "/img/logos/telegram.png" %}" alt="telegram"><a href="https://t.me/{{ el.telegram }}" target="_blank">@{{ el.telegram|upper }}</a></p>
+            </h5>
+        </div>
+    </div>
+{% endfor %}

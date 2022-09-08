@@ -1,0 +1,9 @@
+{% load static %}
+{% for cert in certificates %}
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+        <div class="flex-grow-1 m-4">
+            <h4 class="mb-0">{{ cert.name }} [<a href="{{ cert.link }}" target="_blank">LINK</a>]</h4>
+            <h5 class="mb-0"><img class="icon-logo" src="{% static cert.get_logo %}" alt="{{ cert.provider }}"/>{{ cert.provider }}</h5>
+        </div>
+    </div>
+{% endfor %}
