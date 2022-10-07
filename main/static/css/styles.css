@@ -78,7 +78,7 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  background: url("../img/bg.png") center no-repeat;
+  background: url("../img/bg.gif") center no-repeat;
   background-size: cover;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
